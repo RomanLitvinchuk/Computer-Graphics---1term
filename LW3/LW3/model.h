@@ -8,20 +8,19 @@
 class Model {
 private:
 	std::vector<Vec3f> verts_;
-	std::vector<std::vector<int> > faces_;
-	std::vector<Vec2f> texture_verts_;
-	std::vector<std::vector<int> > faces_texture_;
+	std::vector<std::vector<Vec3i> > faces_;
+	std::vector<Vec3f> norms_;
+	std::vector<Vec2f> uv_;
 public:
 	TGAImage diffusemap_;
 	Model(const char *filename);
 	~Model();
 	int nverts();
 	int nfaces();
-	int ntexture_verts();
+	Vec2i uv(int iface, int nvert);
+	Vec3f norm(int iface, int nvert);
 	Vec3f vert(int i);
 	std::vector<int> face(int idx);
-	std::vector<int> face_texture(int idt);
-	Vec2f texture_vert(int i);
 	TGAColor diffuse(Vec2i uv);
 	void load_texture(std::string filename, TGAImage& img);
 };

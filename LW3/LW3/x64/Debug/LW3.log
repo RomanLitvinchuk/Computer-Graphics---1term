@@ -1,46 +1,28 @@
 ﻿  LW3.cpp
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(63,23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244: аргумент: преобразование "t" в "t", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         with
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:             t=float
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         ]
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         and
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:             t=int
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,105): warning C4244:         ]
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244: аргумент: преобразование "t" в "t", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         with
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:             t=float
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         ]
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         and
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:             t=int
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(122,51): warning C4244:         ]
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(130,104): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         with
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:             t=int
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         ]
+G:\Computer-Graphics---1term\LW3\LW3\tgaimage.h(58,59): warning C4244: =: преобразование "float" в "unsigned char", возможна потеря данных
   (компиляция исходного файла "LW3.cpp")
-      C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74):
+  
+G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(38,23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         with
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         [
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:             t=int
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74): warning C4244:         ]
+  (компиляция исходного файла "LW3.cpp")
+      G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,74):
       контекст создания экземпляра шаблона (сначала самый старый)
-          C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(46,6):
+          G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(19,6):
           выполняется компиляция ссылки на экземпляр класс шаблон функции "Vec2<int>"
-          C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,13):
+          G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,13):
           во время компиляции функции-члена класс шаблон "Vec2<int> Vec2<int>::operator *(float) const"
-              C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(58,25):
+              G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(31,25):
               см. первую ссылку на "Vec2<int>::operator *" в "triangle"
   
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         with
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         [
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:             t=int
-C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         ]
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         with
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         [
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:             t=int
+G:\Computer-Graphics---1term\LW3\LW3\geometry.h(21,67): warning C4244:         ]
   (компиляция исходного файла "LW3.cpp")
   
-  camera.cpp
-  Создание кода...
-  LW3.vcxproj -> C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\x64\Debug\LW3.exe
+  LW3.vcxproj -> G:\Computer-Graphics---1term\LW3\x64\Debug\LW3.exe
