@@ -3,7 +3,7 @@
 #include <sstream>
 #include "model.h"
 
-Model::Model(const char* filename) : verts_(), faces_(), norms_(), uv_(), diffusemap_(), normalmap_(), specularmap_() {
+Model::Model(const char* filename) : verts_(), faces_(), norms_(), uv_(), diffusemap_(), normalmap_(), specularmap_(), backgroundmap_() {
     std::ifstream in;
     in.open(filename, std::ifstream::in);
     if (in.fail()) return;
@@ -45,6 +45,7 @@ Model::Model(const char* filename) : verts_(), faces_(), norms_(), uv_(), diffus
     load_texture(filename, "_diffuse.tga", diffusemap_);
     load_texture(filename, "_nm.tga", normalmap_);
     load_texture(filename, "_spec.tga", specularmap_);
+    load_texture("obj/rainbow.tga", ".tga", backgroundmap_);
 }
 
 Model::~Model() {}
@@ -93,6 +94,14 @@ Vec3f Model::normal(Vec2f uvf) {
     for (int i = 0; i < 3; i++)
         res[2 - i] = (float)c[i] / 255.f * 2.f - 1.f;
     return res;
+}
+
+TGAColor Model::background(float u, float v) {
+    int tex_x = u * backgroundmap_.get_width();
+    int tex_y = v * backgroundmap_.get_height();
+    tex_x = std::max(0, std::min(backgroundmap_.get_width() - 1, tex_x));
+    tex_y = std::max(0, std::min(backgroundmap_.get_height() - 1, tex_y));
+    return backgroundmap_.get(tex_x, tex_y);
 }
 
 Vec2f Model::uv(int iface, int nthvert) {

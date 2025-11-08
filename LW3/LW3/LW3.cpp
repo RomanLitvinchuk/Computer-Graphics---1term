@@ -12,11 +12,8 @@ const int width = 800;
 const int height = 800;
 const int depth = 255;
 Vec3f light_dir(1, 1, 1);
-Vec3f eye(3, 1, 3);
 Vec3f center(0, 0, 0);
 Vec3f up(0, 1, 0);
-Camera camera(eye, center, up);
-Matrix VPM = camera.viewport(width / 8, height / 8, width * 3 / 4, height * 3 / 4, depth) * camera.projection(eye, center) * camera.lookat(eye, center, up);
 
 Vec3f barycentric(Vec2f A, Vec2f B, Vec2f C, Vec2f P) {
     Vec3f s[2];
@@ -34,6 +31,11 @@ Vec3f barycentric(Vec2f A, Vec2f B, Vec2f C, Vec2f P) {
 struct Shader : public OShader {
     Vec3f varying_intensity; 
     mat<2, 3, float> varying_uv;
+    Matrix VPM;
+
+    void setVPM(const Matrix& vpm) {
+        VPM = vpm;
+    }
 
     virtual Vec4f vertex(int iface, int nthvert) {
         varying_uv.set_col(nthvert, model->uv(iface, nthvert));
@@ -73,22 +75,62 @@ void triangle(Vec4f* pts, OShader& shader, TGAImage& image, TGAImage& zbuffer) {
             if (!discard) {
                 zbuffer.set(P.x, P.y, TGAColor(frag_depth));
                 image.set(P.x, P.y, color);
+                
             }
         }
     }
 }
 
-int main(int argc, char** argv) {
-    if (2 == argc) {
-        model = new Model(argv[1]);
+void draw_background(TGAImage& image, Model* model, Matrix VPM) {
+   for (int x = 0; x < width; x++) {
+      for (int y = 0; y < height; y++) {
+           float u = (float)x / width;
+           float v = (float)y / height;
+            TGAColor bg_color = model->background(u, v);
+            image.set(x, y, bg_color);
+        }
     }
-    else {
-        model = new Model("obj/african_head.obj");
+}
+
+void render_scene(const Vec3f& eye_position, const std::string& filename) {
+    Camera camera(eye_position, center, up);
+    Matrix VPM = camera.viewport(width / 8, height / 8, width * 3 / 4, height * 3 / 4, depth) *
+        camera.projection(eye_position, center) *
+        camera.lookat(eye_position, center, up);
+
+    TGAImage image(width, height, TGAImage::RGB);
+    TGAImage zbuffer(width, height, TGAImage::GRAYSCALE);
+
+    draw_background(image, model);
+
+    Shader shader;
+    shader.setVPM(VPM);
+
+    for (int i = 0; i < model->nfaces(); i++) {
+        Vec4f screen_coords[3];
+        for (int j = 0; j < 3; j++) {
+            screen_coords[j] = shader.vertex(i, j);
+        }
+        triangle(screen_coords, shader, image, zbuffer);
     }
+
+    image.flip_vertically();
+    zbuffer.flip_vertically();
+    image.write_tga_file(filename.c_str());
+
+    std::cout << "Rendered: " << filename << " from camera position ("
+        << eye_position.x << ", " << eye_position.y << ", " << eye_position.z << ")" << std::endl;
+}
+
+
+/*int main(int argc, char** argv) {
+    model = new Model("obj/african_head.obj");
     light_dir.normalize();
 
     TGAImage image(width, height, TGAImage::RGB);
     TGAImage zbuffer(width, height, TGAImage::GRAYSCALE);
+
+    draw_background(image, model);
 
     Shader shader;
     for (int i = 0; i < model->nfaces(); i++) {
@@ -103,6 +145,33 @@ int main(int argc, char** argv) {
     zbuffer.flip_vertically();
     image.write_tga_file("output.tga");
     zbuffer.write_tga_file("zbuffer.tga");
+
+    delete model;
+    return 0;
+}*/
+
+int main(int argc, char** argv) {
+    model = new Model("obj/african_head.obj");
+    light_dir.normalize();
+
+    std::vector<Vec3f> camera_positions = {
+        Vec3f(3, 1, 3),  
+        Vec3f(2, 1, 3),  
+        Vec3f(1, 1, 3),  
+        Vec3f(0, 1, 3)   
+    };
+
+    for (size_t i = 0; i < camera_positions.size(); i++) {
+        std::string filename;
+        if (i == 0) {
+            filename = "output.tga";
+        }
+        else {
+            filename = "output" + std::to_string(i + 1) + ".tga";
+        }
+
+        render_scene(camera_positions[i], filename);
+    }
 
     delete model;
     return 0;

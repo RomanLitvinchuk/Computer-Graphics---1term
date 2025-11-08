@@ -1,23 +1,23 @@
 ﻿  LW3.cpp
-G:\Computer-Graphics---1term\LW3\LW3\tgaimage.h(60,59): warning C4244: =: преобразование "float" в "unsigned char", возможна потеря данных
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\tgaimage.h(60,59): warning C4244: =: преобразование "float" в "unsigned char", возможна потеря данных
   (компиляция исходного файла "LW3.cpp")
   
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244: =: преобразование "T" в "T", возможна потеря данных
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         with
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         [
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:             T=float
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         ]
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         and
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         [
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:             T=int
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(65,23): warning C4244:         ]
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244: =: преобразование "T" в "T", возможна потеря данных
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         with
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         [
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:             T=float
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         ]
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         and
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         [
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:             T=int
-G:\Computer-Graphics---1term\LW3\LW3\LW3.cpp(66,27): warning C4244:         ]
-  LW3.vcxproj -> G:\Computer-Graphics---1term\LW3\x64\Debug\LW3.exe
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         with
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         [
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:             T=float
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         ]
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         and
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         [
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:             T=int
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(67,23): warning C4244:         ]
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         with
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         [
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:             T=float
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         ]
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         and
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         [
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:             T=int
+C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\LW3\LW3.cpp(68,27): warning C4244:         ]
+  LW3.vcxproj -> C:\Users\roman\Desktop\Computer-Graphics---1term\LW3\x64\Debug\LW3.exe
